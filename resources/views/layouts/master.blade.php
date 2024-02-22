@@ -12,6 +12,7 @@
 <body>
     <div class="container">
         @yield('content')
+        @yield('home')
 </div>
     @section('footerScripts')
         <script src="app.js"></script> 
