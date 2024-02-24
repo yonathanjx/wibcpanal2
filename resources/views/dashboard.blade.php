@@ -12,8 +12,15 @@
     Welcome to your application Dashboard!
 @endsection
 
+
+{{-- Fri 23 Feb 1:30 AM  Example 4-10. Including view partials with @include --}}
+{{-- Had to add the below variable as the variable in the included file was not working
+    as in the book --}}
+
+{{$pageName = "thenameofthepage";}}
+
 @section('home')
-    <div class="content" data-page-name="pagename">
+    <div class="content" data-page-name="{{ $pageName }}">
     <p>Here's why you should sign up for our app: <strong>It's Great.</strong></p>
         @include('sign-up-button', ['text' => 'See just how great it is'])
     </div>
